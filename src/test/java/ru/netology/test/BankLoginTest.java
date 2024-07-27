@@ -35,7 +35,7 @@ public class BankLoginTest {
         verificationPage.validVerify(verificationCode);
     }
 
-   
+
     @Test
     void shouldGetErrorNotificationIfLoginWithRandomUserWithoutAddingToBase() {
         var loginPage = open("http://localhost:9999", LoginPage.class);
