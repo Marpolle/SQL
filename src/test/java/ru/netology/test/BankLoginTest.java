@@ -35,14 +35,7 @@ public class BankLoginTest {
         verificationPage.validVerify(verificationCode);
     }
 
-    @Test
-    void shouldErrorNotificationIfLogin() {
-        var loginPage = open("http://localhost:9999", LoginPage.class);
-        var authInfo = DataHelper.generateRandomUser();
-        loginPage.validLogin(authInfo);
-        loginPage.verifyErrorNotificationVisiblity();
-    }
-
+   
     @Test
     void shouldGetErrorNotificationIfLoginWithRandomUserWithoutAddingToBase() {
         var loginPage = open("http://localhost:9999", LoginPage.class);
